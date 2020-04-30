@@ -44,10 +44,6 @@ export const WriteBtn = styled.a.attrs({ className: 'btn' })`
     background-color: #ea6f5a;
 `
 
-export const WriteIcon = styled.i`
-
-`
-
 export const SignUpBtn = styled.a.attrs({ className: 'btn' })`
     float: right;
     width: 80px;
@@ -124,6 +120,24 @@ export const NavItemIcon = styled.i`
 export const NavForm = styled.form`
     position: relative;
     top: 9px;
+    .search-btn{
+        i{
+            margin: 5px -1px 0 0;
+            display: block;
+        }
+        position: absolute;
+        top: 4px;
+        right: 5px;
+        width: 30px;
+        height: 30px!important;
+        text-align: center;
+        padding: 0!important;
+        color: #969696!important;
+        text-align: center;
+        border-radius:15px;
+        background-color: #eee;
+        transition: all 1s;
+    }
 `
 export const NavSearch = styled.input.attrs({ placeholder: '搜索' })`
     padding: 0 40px 0 20px;
@@ -134,31 +148,15 @@ export const NavSearch = styled.input.attrs({ placeholder: '搜索' })`
     border-radius: 40px;
     background: #eee;
     transition: width .5s;
-    -moz-transition: width .5s;
-    -webkit-transition: width .5s;
-    -o-transition: width .5s;
     transition-delay: .1s;
-    -moz-transition-delay: .1s;
-    -webkit-transition-delay: .1s;
-    -o-transition-delay: .1s;
     &::placeholder{
         color: #ccc;
     }
-`
-
-export const NavSearchBtn = styled.a`
-    position: absolute;
-    top: 4px;
-    right: 5px;
-    width: 30px;
-    height: 30px!important;
-    line-height: normal!important;
-    padding: 0!important;
-    color: #969696!important;
-    text-align: center;
-`
-
-export const NavSearchIcon = styled.i`
-    margin: 5px -1px 0 0;
-    display: block;
+    &.focus{
+        width: 320px;   
+        ~.search-btn{
+            background-color: #ccc;
+        }
+    }
+    
 `
