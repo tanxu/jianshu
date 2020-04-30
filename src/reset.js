@@ -1,6 +1,13 @@
 import { injectGlobal } from 'styled-components'
 
 injectGlobal`
+a{
+	text-decoration:none;
+}
+input{
+	outline: none;
+	box-sizing: border-box;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -14,6 +21,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	border: 0;
