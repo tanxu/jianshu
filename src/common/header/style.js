@@ -166,7 +166,7 @@ export const SearchInfo = styled.div`
     background-color: #fff;
     box-shadow: 0 0 8px rgba(0,0,0,.2);
     margin-top: 9px;
-    width: 250px;
+    width: 320px;
     left: 0;
     top: 100%;
     border-radius: 4px;
