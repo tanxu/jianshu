@@ -87,3 +87,24 @@ export const ListInfo = styled.div`
         color: #999;
     }
 `
+
+// RecommendWrapper
+
+export const RecommendWrapper = styled.div`
+    margin-top: -4px;
+    padding-bottom: 4px;
+    min-height: 228px;
+`
+export const RecommendItem = styled.a`
+    .recommend-pic{
+        width: 100%;
+        min-height: 50px;
+        margin-bottom: 6px;
+        border-radius: 4px;
+        vertical-align: middle;
+    }
+`
+
+
+
+

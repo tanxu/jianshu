@@ -9,10 +9,6 @@ import { actionCreators } from './store'
 
 class Header extends Component {
 
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     const { handleInputBlur, handleInputFocus, focused, list } = this.props
     return (

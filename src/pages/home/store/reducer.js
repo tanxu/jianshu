@@ -1,4 +1,4 @@
-import * as actionTypes from './actionTypes'
+// import * as actionTypes from './actionTypes'
 import { fromJS } from 'immutable'
 const defaultState = fromJS({
   topicList: [
@@ -44,15 +44,15 @@ const defaultState = fromJS({
       desc: '人到中年，生活的压力往往很大，为了谋生，许多夫妻不得不长期两地分居。在不同的地方为了自己、父母，孩子而打拼。 对长期两地分居的夫妻来说，女人要承...',
       imgUrl: 'https://upload-images.jianshu.io/upload_images/16623634-dd2b82b615b125ae?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240'
     }
+  ],
+  recommendList: [
+    { id: 1, title: 'xxx', desc: '', href: 'xxx', imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-club-aa8bdf19f8cf729a759da42e4a96f366.png' },
+    { id: 2, title: 'xxx', desc: '', href: 'xxx', imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png' },
+    { id: 3, title: 'xxx', desc: '', href: 'xxx', imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png' },
+    { id: 4, title: 'xxx', desc: '', href: 'xxx', imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png' }
   ]
 })
 
 export default (state = defaultState, action) => {
-  switch (action.type) {
-    case actionTypes.SEARCH_FOCUS:
-      return state.set('focused', true)
-
-    default:
-      return state;
-  }
+  return state;
 }
