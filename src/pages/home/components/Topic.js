@@ -5,10 +5,11 @@ import { TopicWrapper, TopicItem } from '../style'
 // 专题
 class Topic extends Component {
   render() {
+    const { list } = this.props
     return (
       <TopicWrapper>
         {
-          this.props.list.map((item) => {
+          list.map((item) => {
             return (
               <TopicItem key={item.get('id')}>
                 <img className="topic-pic" src={item.get('imgUrl')} alt={item.get('title')} />

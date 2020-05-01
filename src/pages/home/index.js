@@ -9,7 +9,7 @@ class Home extends Component {
     return (
       <HomeWrapper>
         <HomeLeft>
-          <img alt="图片" src="https://upload-images.jianshu.io/upload_images/2021661-17d336d190883e7a.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp" />
+          <img className="home-pic" alt="图片" src="https://upload-images.jianshu.io/upload_images/2021661-17d336d190883e7a.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp" />
           <Topic></Topic>
           <List></List>
         </HomeLeft>

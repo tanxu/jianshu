@@ -13,7 +13,7 @@ export const HomeLeft = styled.div`
     position: relative;
     min-height: 1px;
     padding-left: 15px;
-    img{
+    .home-pic{
       width: 625px;
       height: 270px;
     }
@@ -33,6 +33,7 @@ export const TopicWrapper = styled.div`
     overflow: hidden;
     padding: 20px 0 10px 0;
     margin-left: -18px;
+    border-bottom: 1px solid #dcdcdc;
 `
 export const TopicItem = styled.div`
     float: left;
@@ -54,5 +55,35 @@ export const TopicItem = styled.div`
         display: block;
         float:left;
         margin-right:10px;
+    }
+`
+
+
+// 列表
+export const ListItem = styled.div`
+    padding: 20px 0;
+    border-bottom: 1px solid #dcdcdc;
+    overflow: hidden;
+    .list-pic{
+        width: 125px;
+        height: 100px;
+        display: block;
+        float: right;
+        border-radius:10px;
+    }
+`
+export const ListInfo = styled.div`
+    width: 500px;
+    float: left;
+    .list-title{
+        font-size: 18px;
+        line-height:27px;
+        font-weight: bold;
+        color: #333;
+    }
+    .list-desc{
+        font-size: 13px;
+        line-height: 24px;
+        color: #999;
     }
 `
