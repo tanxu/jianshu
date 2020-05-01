@@ -6,6 +6,20 @@
   "description": "简书",
   "glyphs": [
     {
+      "icon_id": "12215223",
+      "name": "right",
+      "font_class": "right",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "562666",
+      "name": "follow",
+      "font_class": "follow",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
       "icon_id": "401103",
       "name": "spin",
       "font_class": "spin",

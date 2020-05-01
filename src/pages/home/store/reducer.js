@@ -50,6 +50,13 @@ const defaultState = fromJS({
     { id: 2, title: 'xxx', desc: '', href: 'xxx', imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png' },
     { id: 3, title: 'xxx', desc: '', href: 'xxx', imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png' },
     { id: 4, title: 'xxx', desc: '', href: 'xxx', imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png' }
+  ],
+  writerList: [
+    { id: 1, name: '邓哲', desc: '写了433.5k字 · 1.3k喜欢', avator: 'https://upload.jianshu.io/users/upload_avatars/278/0778727c-c557-4ffb-929c-6ee182a58145.png?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp' },
+    { id: 1, name: '闫泽华', desc: '写了256.6k字 · 4.6k喜欢', avator: 'https://upload.jianshu.io/users/upload_avatars/52841/251f5481-67b6-4bf0-86f4-faac9768beb3.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp' },
+    { id: 1, name: '梅拾璎', desc: '写了275.8k字 · 30.6k喜欢', avator: 'https://upload.jianshu.io/users/upload_avatars/3136195/484e32c3504a.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp' },
+    { id: 1, name: '吴晓布', desc: '写了748.4k字 · 24.9k喜欢', avator: 'https://upload.jianshu.io/users/upload_avatars/3343569/6940ee65-036f-4b7a-9935-5915d9b67d14.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp' },
+    { id: 1, name: '没文化的野狐狸', desc: '写了293.1k字 · 6.1k喜欢', avator: 'https://upload.jianshu.io/users/upload_avatars/6652326/ba6106f4-20eb-4735-885d-561083bd4e55.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp' }
   ]
 })
 
