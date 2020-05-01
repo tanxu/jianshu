@@ -4,7 +4,7 @@ import {
   Container, StyleMode, ModeBtn, NavBar, NavItem, NavItemA, NavItemText, NavForm, NavSearch,
 } from './style'
 import { connect } from "react-redux";
-
+import { actionCreators } from './store'
 const Header = (props) => {
   return (
     <NavHeaderWrapper>
@@ -60,16 +60,10 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     handleInputBlur() {
-      const action = {
-        type: 'SEARCH_BLUR',
-      }
-      dispatch(action)
+      dispatch(actionCreators.searchBlurAction())
     },
     handleInputFocus() {
-      const action = {
-        type: 'SEARCH_FOCUS',
-      }
-      dispatch(action)
+      dispatch(actionCreators.searchFocusAction())
     }
   }
 }
