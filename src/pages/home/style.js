@@ -96,6 +96,7 @@ export const RecommendWrapper = styled.div`
     min-height: 228px;
 `
 export const RecommendItem = styled.a`
+    background: url(${(props) => props.imgUrl});
     .recommend-pic{
         width: 100%;
         min-height: 50px;

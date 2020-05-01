@@ -10,7 +10,7 @@ class Recommend extends Component {
         {
           list.map((item) => {
             return (
-              <RecommendItem key={item.get('id')} href='#' onClick={e => e.preventDefault()}>
+              <RecommendItem imgUrl={item.get('imgUrl')} key={item.get('id')} href='#' onClick={e => e.preventDefault()}>
                 <img className="recommend-pic" src={item.get('imgUrl')} alt={item.get('title')} />
               </RecommendItem>
             )
