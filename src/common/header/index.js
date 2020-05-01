@@ -1,10 +1,35 @@
 import React from 'react'
 import {
   HeaderWrapper, Logo, NavHeaderWrapper, WriteBtn, SignUpBtn, LogInBtn,
-  Container, StyleMode, ModeBtn, NavBar, NavItem, NavItemA, NavItemText, NavForm, NavSearch,
+  Container, StyleMode, ModeBtn, NavBar, NavItem, NavItemA, NavItemText, NavForm, NavSearch, SearchInfo,
+  SearchInfoTitle, SearchInfoSwitch, SearchInfoItem, SearchInfoList
 } from './style'
 import { connect } from "react-redux";
 import { actionCreators } from './store'
+
+const getListArea = (show) => {
+  if (show) {
+    return (
+      <SearchInfo>
+        <SearchInfoTitle>
+          热门搜索
+          <SearchInfoSwitch>换一批</SearchInfoSwitch>
+        </SearchInfoTitle>
+        <SearchInfoList>
+          <SearchInfoItem>简述</SearchInfoItem>
+          <SearchInfoItem>简述</SearchInfoItem>
+          <SearchInfoItem>简述</SearchInfoItem>
+          <SearchInfoItem>简述</SearchInfoItem>
+          <SearchInfoItem>简述</SearchInfoItem>
+          <SearchInfoItem>简述</SearchInfoItem>
+        </SearchInfoList>
+      </SearchInfo>
+    )
+  } else {
+    return null
+  }
+}
+
 const Header = (props) => {
   return (
     <NavHeaderWrapper>
@@ -42,6 +67,7 @@ const Header = (props) => {
                 <div className="search-btn">
                   <i className="iconfont">&#xe60b;</i>
                 </div>
+                {getListArea(props.focused)}
               </NavForm>
             </NavItem>
           </NavBar>
