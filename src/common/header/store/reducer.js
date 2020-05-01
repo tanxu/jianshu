@@ -2,7 +2,10 @@ import * as actionTypes from './actionTypes'
 import { fromJS } from 'immutable'
 const defaultState = fromJS({
     focused: false,
-    list: []
+    mouseIn: false,
+    list: [],
+    page: 1,
+    totalPage: 0
 })
 
 export default (state = defaultState, action) => {
@@ -13,7 +16,11 @@ export default (state = defaultState, action) => {
         case actionTypes.SEARCH_BLUR:
             return state.set('focused', false)
         case actionTypes.CHANGE_LIST:
-            return state.set('list', fromJS(action.data))
+            return state.set('list', fromJS(action.data)).set('totalPage', action.totalPage)
+        case actionTypes.MOUSE_STATUS_CHANGE:
+            return state.set('mouseIn', fromJS(action.flag))
+        case actionTypes.CHANGE_PAGE:
+            return state.set('page', action.page)
         default:
             return state;
     }
