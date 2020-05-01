@@ -1,5 +1,15 @@
 import * as actionTypes from './actionTypes'
 import axios from 'axios'
+
+
+const getListAction = (data) => {
+  return {
+    type: actionTypes.CHANGE_LIST,
+    data: data
+  }
+}
+
+
 export const searchFocusAction = () => {
   return {
     type: actionTypes.SEARCH_FOCUS,
@@ -11,12 +21,6 @@ export const searchBlurAction = () => {
   }
 }
 
-export const getListAction = (data) => {
-  return {
-    type: actionTypes.CHANGE_LIST,
-    data: data
-  }
-}
 
 export const getList = () => {
   return (dispatch) => {

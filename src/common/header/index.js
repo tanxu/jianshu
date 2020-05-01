@@ -14,6 +14,7 @@ class Header extends Component {
   }
 
   render() {
+    const { handleInputBlur, handleInputFocus, focused } = this.props
     return (
       <NavHeaderWrapper>
         <HeaderWrapper>
@@ -45,8 +46,8 @@ class Header extends Component {
               </NavItem>
               <NavItem className="search">
                 <NavForm>
-                  <NavSearch onBlur={this.props.handleInputBlur} onFocus={this.props.handleInputFocus}
-                    className={this.props.focused ? 'focus' : ''} />
+                  <NavSearch onBlur={handleInputBlur} onFocus={handleInputFocus}
+                    className={focused ? 'focus' : ''} />
                   <div className="search-btn">
                     <i className="iconfont">&#xe60b;</i>
                   </div>
@@ -61,7 +62,8 @@ class Header extends Component {
   }
 
   getListArea = () => {
-    if (this.props.focused) {
+    const { focused, list } = this.props
+    if (focused) {
       return (
         <SearchInfo>
           <SearchInfoTitle>
@@ -70,7 +72,7 @@ class Header extends Component {
           </SearchInfoTitle>
           <SearchInfoList>
             {
-              this.props.list.map((item) => {
+              list.map((item) => {
                 return <SearchInfoItem key={item}>{item}</SearchInfoItem>
               })
             }
