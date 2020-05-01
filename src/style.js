@@ -28,5 +28,9 @@ injectGlobal`
         margin-left: auto;
         padding-left: 15px;
         padding-right: 15px;
+        width: 960px;
+    }
+    #root{
+        padding-top: 56px;
     }
 `
