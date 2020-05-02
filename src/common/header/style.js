@@ -23,7 +23,7 @@ export const HeaderWrapper = styled.div`
     margin: 0 auto;
 `
 
-export const Logo = styled.a`
+export const Logo = styled.div`
     width: 100px;
     height: 56px;
     padding: 0;

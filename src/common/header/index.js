@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
+import { Link } from 'react-router-dom'
 import {
   HeaderWrapper, Logo, NavHeaderWrapper, WriteBtn, SignUpBtn, LogInBtn,
   Container, StyleMode, ModeBtn, NavBar, NavItem, NavItemA, NavItemText, NavForm, NavSearch, SearchInfo,
@@ -7,7 +8,7 @@ import {
 import { connect } from "react-redux";
 import { actionCreators } from './store'
 
-class Header extends Component {
+class Header extends PureComponent {
 
   render() {
     const { handleInputBlur, handleInputFocus, focused, list } = this.props
@@ -15,7 +16,9 @@ class Header extends Component {
       <NavHeaderWrapper>
         <HeaderWrapper>
           {/* 左上角Logo */}
-          <Logo href="/" />
+          <Link to="/">
+            <Logo />
+          </Link>
           {/* 右上角 - 登录注册写文章 */}
           <WriteBtn><i className="iconfont">&#xe6e5;</i>写文章</WriteBtn>
           <SignUpBtn>注册</SignUpBtn>
