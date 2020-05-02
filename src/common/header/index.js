@@ -21,7 +21,7 @@ class Header extends PureComponent {
             <Logo />
           </Link>
           {/* 右上角 - 登录注册写文章 */}
-          <WriteBtn><i className="iconfont">&#xe6e5;</i>写文章</WriteBtn>
+          <Link to="/write"><WriteBtn><i className="iconfont">&#xe6e5;</i>写文章</WriteBtn></Link>
           <SignUpBtn>注册</SignUpBtn>
           {loginStatus ? <LogInBtn onClick={this.props.handleLogout}>退出</LogInBtn> : <Link to="/login"><LogInBtn>登录</LogInBtn></Link>}
           <StyleMode>

@@ -32,7 +32,7 @@ export const Logo = styled.div`
     float: left;
 `
 
-export const WriteBtn = styled.a.attrs({ className: 'btn' })`
+export const WriteBtn = styled.div.attrs({ className: 'btn' })`
     float: right;
     width: 100px;
     height: 40px;
