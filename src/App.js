@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Header from './common/header'
 import store from './store'
 import { Provider } from 'react-redux'

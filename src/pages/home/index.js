@@ -6,7 +6,7 @@ import List from './components/List'
 import Recommend from './components/Recommend'
 import Writer from './components/Writer'
 import Download from './components/Download'
-import { actionCreators, actionTypes } from './store'
+import { actionCreators } from './store'
 class Home extends PureComponent {
 
   componentDidMount() {
