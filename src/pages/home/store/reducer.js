@@ -7,6 +7,7 @@ const defaultState = fromJS({
   recommendList: [],
   writerList: [],
   articlePage: 1,
+  scrollTopShow: false
 })
 
 export default (state = defaultState, action) => {
@@ -23,6 +24,9 @@ export default (state = defaultState, action) => {
         articleList: state.get('articleList').concat(fromJS(action.data)),
         articlePage: action.nextPage
       })
+    case actionTypes.WINDOW_SCROLL:
+      return state.set('scrollTopShow', action.show)
+
     default:
       return state;
   }

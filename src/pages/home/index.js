@@ -1,16 +1,29 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { HomeWrapper, HomeLeft, HomeRight } from "./style";
+import { HomeWrapper, HomeLeft, HomeRight, BackTop } from "./style";
 import Topic from './components/Topic'
 import List from './components/List'
 import Recommend from './components/Recommend'
 import Writer from './components/Writer'
 import Download from './components/Download'
-import { actionCreators } from './store'
+import { actionCreators, actionTypes } from './store'
 class Home extends Component {
 
   componentDidMount() {
     this.props.changeHomeData()
+    this.bindEvent()
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.props.windowScroll)
+  }
+
+  bindEvent() {
+    window.addEventListener('scroll', this.props.windowScroll)
+  }
+
+  handleBackTop() {
+    window.scrollTo(0, 0)
   }
 
   render() {
@@ -26,8 +39,16 @@ class Home extends Component {
           <Download></Download>
           <Writer></Writer>
         </HomeRight>
+        {this.props.scrollTopShow ? <BackTop onClick={this.handleBackTop}>回顶</BackTop> : null}
+
       </HomeWrapper>
     )
+  }
+}
+
+const mapStateToProps = (state) => {
+  return {
+    scrollTopShow: state.getIn(['home', 'scrollTopShow'])
   }
 }
 
@@ -35,8 +56,15 @@ const mapDispatchToProps = (dispatch) => {
   return {
     changeHomeData() {
       dispatch(actionCreators.getHomeInfo())
+    },
+    windowScroll() {
+      if (document.documentElement.scrollTop > 100) {
+        dispatch(actionCreators.windowScroll(true))
+      } else {
+        dispatch(actionCreators.windowScroll(false))
+      }
     }
   }
 }
 
-export default connect(null, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

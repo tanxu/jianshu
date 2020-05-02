@@ -19,6 +19,13 @@ const addHomeList = (result, nextPage) => {
   }
 }
 
+export const windowScroll = (flag) => {
+  return {
+    type: actionTypes.WINDOW_SCROLL,
+    show: flag
+  }
+}
+
 export const getHomeInfo = () => {
   return (dispatch) => {
     axios.get('https://www.fastmock.site/mock/7d93730d50b7ddbcac726b3b517934eb/jianshu/home').then(res => {

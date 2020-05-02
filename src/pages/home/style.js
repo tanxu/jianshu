@@ -28,6 +28,21 @@ export const HomeRight = styled.div`
     min-height: 1px;
 `
 
+// back top
+export const BackTop = styled.div`
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1040;
+    border: 1px solid #dcdcdc;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    display: block;
+`
+
 // Topic
 export const TopicWrapper = styled.div`
     overflow: hidden;
