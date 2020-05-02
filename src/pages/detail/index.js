@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { DetailWrapper, Header, Content } from './style'
 import { actionCreators } from './store'
@@ -9,6 +10,7 @@ class Detail extends Component {
   }
 
   render() {
+    console.log(this.props)
     // console.log(this.props.match.params) // 动态参数
     // console.log(this.props.location.search) // 查询字符串
     const { title, content } = this.props
@@ -36,4 +38,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Detail);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Detail));
