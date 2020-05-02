@@ -87,7 +87,19 @@ export const ListInfo = styled.div`
         color: #999;
     }
 `
-
+export const LoadMore = styled.div`
+    width: 100%;
+    border-radius: 20px;
+    background-color: #a5a5a5;
+    height: 40px;
+    margin: 30px auto 60px;
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    display: block;
+    cursor: pointer;
+`
 // RecommendWrapper
 
 export const RecommendWrapper = styled.div`
