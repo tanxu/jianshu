@@ -30,8 +30,3 @@ export const Content = styled.div`
     }
 `
 
-
-export const Content1 = styled.div``
-export const Content2 = styled.div``
-export const Content3 = styled.div``
-export const Content4 = styled.div``
