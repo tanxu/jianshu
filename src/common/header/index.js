@@ -7,11 +7,12 @@ import {
 } from './style'
 import { connect } from "react-redux";
 import { actionCreators } from './store'
+import { actionCreators as loginActionCreator } from '../../pages/login/store'
 
 class Header extends PureComponent {
 
   render() {
-    const { handleInputBlur, handleInputFocus, focused, list } = this.props
+    const { handleInputBlur, handleInputFocus, focused, list, loginStatus } = this.props
     return (
       <NavHeaderWrapper>
         <HeaderWrapper>
@@ -22,7 +23,7 @@ class Header extends PureComponent {
           {/* 右上角 - 登录注册写文章 */}
           <WriteBtn><i className="iconfont">&#xe6e5;</i>写文章</WriteBtn>
           <SignUpBtn>注册</SignUpBtn>
-          <LogInBtn>登录</LogInBtn>
+          {loginStatus ? <LogInBtn onClick={this.props.handleLogout}>退出</LogInBtn> : <Link to="/login"><LogInBtn>登录</LogInBtn></Link>}
           <StyleMode>
             <ModeBtn>
               <i className="iconfont">&#xe636;</i>
@@ -99,7 +100,9 @@ const mapStateToProps = (state) => {
     list: state.getIn(['header', 'list']),
     page: state.getIn(['header', 'page']),
     totalPage: state.getIn(['header', 'totalPage']),
-    mouseIn: state.getIn(['header', 'mouseIn'])
+    mouseIn: state.getIn(['header', 'mouseIn']),
+
+    loginStatus: state.getIn(['login', 'loginStatus'])
   }
 }
 
@@ -131,6 +134,9 @@ const mapDispatchToProps = (dispatch) => {
       } else {
         dispatch(actionCreators.pageChange(1))
       }
+    },
+    handleLogout() {
+      dispatch(loginActionCreator.logout())
     }
   }
 }

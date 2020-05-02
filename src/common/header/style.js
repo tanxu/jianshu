@@ -57,7 +57,7 @@ export const SignUpBtn = styled.a.attrs({ className: 'btn' })`
     background-color: transparent;
 `
 
-export const LogInBtn = styled.a.attrs({ className: 'btn' })`
+export const LogInBtn = styled.div.attrs({ className: 'btn' })`
     float: right;
     margin: 11px 6px 0 10px;
     font-size: 15px;
