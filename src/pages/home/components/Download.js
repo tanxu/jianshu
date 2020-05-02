@@ -18,10 +18,4 @@ class Download extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-
-  }
-}
-
-export default connect()(Download);
+export default connect(null, null)(Download);

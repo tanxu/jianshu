@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import axios from 'axios'
 import { HomeWrapper, HomeLeft, HomeRight } from "./style";
 import Topic from './components/Topic'
 import List from './components/List'
@@ -11,21 +10,7 @@ import { actionCreators } from './store'
 class Home extends Component {
 
   componentDidMount() {
-    axios.get('https://www.fastmock.site/mock/7d93730d50b7ddbcac726b3b517934eb/jianshu/home').then(res => {
-      if (res.data.success) {
-        const action = {
-          type: "change_home_data",
-          topicList: res.data.result.topicList,
-          articleList: res.data.result.articleList,
-          recommendList: res.data.result.recommendList,
-          writerList: res.data.result.writerList,
-        }
-        this.props.changeHomeData(action)
-      }
-
-    }).catch(error => {
-      console.log('error', error)
-    })
+    this.props.changeHomeData()
   }
 
   render() {
@@ -48,8 +33,8 @@ class Home extends Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    changeHomeData(action) {
-      dispatch(action)
+    changeHomeData() {
+      dispatch(actionCreators.getHomeInfo())
     }
   }
 }
