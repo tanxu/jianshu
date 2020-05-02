@@ -7,9 +7,9 @@ const changeData = (title, content) => {
   }
 }
 
-export const getDetailData = () => {
+export const getDetailData = (id) => {
   return (dispatch) => {
-    axios.get('https://www.fastmock.site/mock/7d93730d50b7ddbcac726b3b517934eb/jianshu/detailData').then(res => {
+    axios.get('https://www.fastmock.site/mock/7d93730d50b7ddbcac726b3b517934eb/jianshu/detailData?id=' + id).then(res => {
       if (res.data.success) {
         const { title, content } = res.data.result
         dispatch(changeData(title, content))

@@ -5,10 +5,11 @@ import { actionCreators } from './store'
 class Detail extends Component {
 
   componentDidMount() {
-    this.props.getDetail()
+    this.props.getDetail(this.props.match.params.id)
   }
 
   render() {
+    // console.log(this.props.match.params)
     const { title, content } = this.props
     return (
       <DetailWrapper>
@@ -28,8 +29,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getDetail() {
-      dispatch(actionCreators.getDetailData())
+    getDetail(id) {
+      dispatch(actionCreators.getDetailData(id))
     }
   }
 }
