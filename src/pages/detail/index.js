@@ -9,7 +9,8 @@ class Detail extends Component {
   }
 
   render() {
-    // console.log(this.props.match.params)
+    // console.log(this.props.match.params) // 动态参数
+    // console.log(this.props.location.search) // 查询字符串
     const { title, content } = this.props
     return (
       <DetailWrapper>
